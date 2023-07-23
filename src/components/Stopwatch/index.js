@@ -8,9 +8,10 @@ class Stopwatch extends Component {
     this.state = {initial: false, initialminutes: 0, initialsecond: 0}
   }
 
-  //   componentWillUnmount(){
-  //       this.
-  //   }
+  componentWillUnmount() {
+    clearInterval(this.intervalId)
+  }
+
   resetting = () => {
     clearInterval(this.intervalId)
     this.setState({initial: false, initialminutes: 0, initialsecond: 0})
